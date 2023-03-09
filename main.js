@@ -1,14 +1,10 @@
 var input= document.getElementById("input");
 var btnAdd= document.getElementById("additionner");
-var container2=document.getElementById("container2");
-var grandeDiv=document.getElementById("gd-div");
 var listTache = document.getElementById('list-tache')
 
 
 
 btnAdd.addEventListener('click',function(){
-        
-        
         
 // div
 var tache = document.createElement('div')
@@ -27,22 +23,36 @@ deleteBtn.addEventListener('click', function(){
 
         tache=tache.remove()
       }
+    })
 
+    var editBtn = document.createElement('button')
+    editBtn.textContent = "Modifier";
 
-          
-      }
+     editBtn.addEventListener('click',function() {
 
-// var editBtn = document.createElement('button')
-// editBtn.textContent = "Modifier"
+      listTache = document.getElementById('list-tache').children[0];
+       var newInput=document.createElement('input');
+       input.type="text"
+       newInput.id="inputModif";
+       console.log(newInput);
+       
+       listTache.replaceChild(newInput,listTache.childNodes[0]);
 
+       
+      })
+      
+      var newInput=document.getElementById('inputModif')
 
-
-
+      newInput.addEventListener('focusout',function(){
+        
+          newInput.value=document.createElement('p')
+          console.log(newInput.value);
+       })
 
         tache.appendChild(titreDeTache)
 tache.appendChild(deleteBtn)
 tache.appendChild(editBtn)
-console.log(tache )
+
 listTache.appendChild(tache)
 
      input.value =""

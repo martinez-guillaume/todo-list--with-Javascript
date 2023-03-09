@@ -23,7 +23,10 @@ deleteBtn.textContent = "Supprimer"
 
 deleteBtn.addEventListener('click', function(){
       let res=   confirm('etes vous sur ')
-      console.log(res)
+      if(res==true){
+            tache=tache.remove()
+      }
+      // console.log(res)
 })
 
 var editBtn = document.createElement('button')

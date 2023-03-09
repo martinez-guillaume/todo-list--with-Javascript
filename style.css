@@ -16,5 +16,20 @@ align-items: center;
     background-color: rgb(118, 207, 127);
     margin:auto;
     border-radius: 15px;
-    margin-bottom: 1%;
+    margin-bottom: 2%;
+}
+#divmodif{
+    margin: auto;
+    background-color: rgb(110, 159, 142);
+    border-radius: 10px;
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+    height:50vh;
+
+}
+#inputModif{
+    padding: 10px;
 }

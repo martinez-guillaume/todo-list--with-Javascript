@@ -1,6 +1,6 @@
 var input= document.getElementById("input");
 var btnAdd= document.getElementById("additionner");
-var listTache = document.getElementById('list-tache')
+var listTache = document.getElementById('list_tache')
 
 
 
@@ -15,7 +15,10 @@ var titreDeTache = document.createElement('p')
 titreDeTache.textContent = input.value
 
 var deleteBtn = document.createElement('button')
-deleteBtn.textContent = "Supprimer"
+deleteBtn.textContent = "Supprimer";
+ var editBtn = document.createElement('button')
+    editBtn.textContent = "Modifier";
+
 
 deleteBtn.addEventListener('click', function(){
       let res=   confirm('etes vous sur ')
@@ -25,29 +28,28 @@ deleteBtn.addEventListener('click', function(){
       }
     })
 
-    var editBtn = document.createElement('button')
-    editBtn.textContent = "Modifier";
-
      editBtn.addEventListener('click',function() {
 
-      listTache = document.getElementById('list-tache').children[0];
+      listTache2 = this.parentNode;
+      console.log(listTache2)
        var newInput=document.createElement('input');
-       input.type="text"
        newInput.id="inputModif";
-       console.log(newInput);
+       newInput.value = titreDeTache.textContent;
+       console.log(titreDeTache.textContent)
        
-       listTache.replaceChild(newInput,listTache.childNodes[0]);
+       listTache2.replaceChild(newInput,listTache2.childNodes[0]);
 
        
-      })
-      
-      var newInput=document.getElementById('inputModif')
+      var sortie = document.getElementById("inputModif")
 
-      newInput.addEventListener('focusout',function(){
-        
-          newInput.value=document.createElement('p')
-          console.log(newInput.value);
-       })
+      newInput.addEventListener('focusout', function() {
+        var nouveauTitreDeTache = document.createElement('p');
+        nouveauTitreDeTache.textContent = newInput.value;
+        listTache2.replaceChild(nouveauTitreDeTache, newInput);
+    });
+})
+    
+
 
         tache.appendChild(titreDeTache)
 tache.appendChild(deleteBtn)

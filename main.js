@@ -1,11 +1,15 @@
 var input= document.getElementById("input");
+input.maxLength="21";
 var btnAdd= document.getElementById("additionner");
 var listTache = document.getElementById('list_tache')
 
 
 
 btnAdd.addEventListener('click',function(){
-        
+  if (input.value === '') {
+    alert("Le champ d'entrée ne peut pas être vide!");
+    return;
+  }      
 // div
 var tache = document.createElement('div')
 tache.id = "tache"
@@ -21,7 +25,7 @@ deleteBtn.textContent = "Supprimer";
 
 
 deleteBtn.addEventListener('click', function(){
-      let res=   confirm('etes vous sur ')
+      let res=   confirm('etes vous sur de vouloir supprimer ? ')
       if(res==true){
 
         tache=tache.remove()
@@ -34,6 +38,7 @@ deleteBtn.addEventListener('click', function(){
       console.log(listTache2)
        var newInput=document.createElement('input');
        newInput.id="inputModif";
+       newInput.maxLength="21";
        newInput.value = titreDeTache.textContent;
        console.log(titreDeTache.textContent)
        

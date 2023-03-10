@@ -69,21 +69,24 @@ main{
 }
 @media (max-width:600px){
     #container1{
-        width:92%;
+        width:95%;
         margin-bottom:5%;
-     
+        
     }
     #input{
       width:55%;
     }
     
     main{
-        width:99%;
+        width:100%;
         border:none;
+        padding-right:0;
+        padding-left:0;
+        
     }
     #tache{
         
-        width:92%;
+        width:95%;
         margin-bottom:5%;
         padding-bottom:2%;
         padding-top:2%;

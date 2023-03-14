@@ -1,53 +1,86 @@
+*{
+    padding:0%;
+    margin:0%;
+}
+main{
+    background-image: url("fond-dessine-main-taches-aquarelles-naturelles-feuilles_91008-86.jpg");
+    background-size: cover;  
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-top:3%;
+    padding-bottom: 24%;
+}
 #container1{
     display: flex;
-flex-direction: column;
-align-items: center;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
     width:50%;
-    background: rgb(87,36,129);
-    background: linear-gradient(90deg, rgba(87,36,129,1) 0%, rgba(148,27,128,1) 25%, rgba(224,0,116,1) 50%, rgba(0,139,208,1) 75%, rgba(0,92,168,1) 100%);
+    background-image: url("téléchargement-pastel-rose.jfif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background: rgb(87,36,129);
+    background: linear-gradient(90deg, rgba(87,36,129,1) 0%, rgba(148,27,128,1) 25%, rgba(224,0,116,1) 50%, rgba(0,139,208,1) 75%, rgba(0,92,168,1) 100%); */
     margin:auto;
     border-radius: 15px;
-    margin-bottom: 2%;
-    padding:0 0 1% 0;
+    margin-bottom: 3%;
+    padding:0 0 2% 0;
+    box-shadow: rgb(0, 0, 0) 0px 10px 20px -7px;
 }
 #tache{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width:50%;
-    background: rgb(87,36,129);
-    background: linear-gradient(90deg, rgba(87,36,129,1) 0%, rgba(148,27,128,1) 25%, rgba(224,0,116,1) 50%, rgba(0,139,208,1) 75%, rgba(0,92,168,1) 100%);
+    background-color: rgb(254, 247, 207);
     margin:auto;
     border-radius: 15px;
     margin-bottom: 2%;
     height:6vh;
     padding:1% 0 1% 0;
+    box-shadow: rgb(0, 0, 0) 0px 10px 20px -7px;
 }
-
+h2{
+    padding-top:5%;
+    padding-bottom:5%;
+    font-family:dancing script ;
+    text-decoration: underline;
+    text-underline-offset: 40%;
+}
 #inputModif{
     padding: 10px;
 }
-body{
-    background-color: #000008;
-}
+
 #input{
     border-radius: 15px;
     padding:10px;
     width:40%;
 }
 #additionner{
-    margin-top:2%;
+    margin-top:5%;
     width:10%;
     height:5vh;
     border-radius: 5px;
-    background-color: #fcc400;
+    background-color: rgb(219, 243, 245);
     margin-bottom:1%;
+    border-color: rgb(219, 243, 245)
+}
+#additionner:hover{
+    background-color: rgb(168, 236, 230);
+    box-shadow: rgb(0, 0, 0) 0px 10px 20px -7px;
+    border-color: rgb(168, 236, 230);
 }
 button{
+    border-color: rgb(219, 243, 245);
     border-radius: 5px;
     padding:1%;
-    background-color: #fcc400;
+    background-color: rgb(219, 243, 245);
+
+}
+button:hover{
+    background-color: rgb(168, 236, 230);
+    border-color: rgb(168, 236, 230);
+    box-shadow: rgb(0, 0, 0) 0px 10px 20px -7px;
 }
 p{
     background-color: #ffffff;
@@ -56,36 +89,37 @@ p{
     border-radius: 5px;
    
 }
-main{
-    border:2px solid #fcc400;
-    width:80%;
-    margin: auto;
-    padding:2%;
-    border-radius: 10px;
-}
+
 #inputModif{
     width:15%;
     background-color: #ffffff;
 }
+@media(max-width:1050px){
+    #container1{
+        width:80%;
+    }
+    #tache{
+        width:80%;
+    }
+}
 @media (max-width:600px){
     #container1{
         width:95%;
-        margin-bottom:5%;
-        
+        margin-bottom:7%;
+        margin-top:3%;
+        padding-bottom:4%;        
     }
+     main{
+        padding-bottom:86%;
+    } 
     #input{
       width:55%;
     }
-    
-    main{
-        width:100%;
-        border:none;
-        padding-right:0;
-        padding-left:0;
-        
-    }
-    #tache{
-        
+   h2{
+    text-underline-offset: 25%;
+   }
+ 
+    #tache{       
         width:95%;
         margin-bottom:5%;
         padding-bottom:2%;
@@ -94,9 +128,24 @@ main{
     #additionner{
         width:17%;
         height:6vh;
-        margin-top:4%;
-        
+        margin-top:4%;       
     }
+}
+@media (max-width:391px){
+    h2{
+        text-decoration: none;
+       }
+       main{
+        padding-bottom:155%;
+    } 
+}
+@media (max-width:361px){
+    h2{
+        text-decoration: none;
+       }
+       main{
+        padding-bottom:143%;
+    } 
 }
 @media (max-height:400px){
     #additionner{

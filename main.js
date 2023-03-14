@@ -1,5 +1,5 @@
 var input= document.getElementById("input");
-input.maxLength="21";
+input.maxLength="20";
 var btnAdd= document.getElementById("additionner");
 var listTache = document.getElementById('list_tache')
 
@@ -33,25 +33,43 @@ deleteBtn.addEventListener('click', function(){
     })
 
      editBtn.addEventListener('click',function() {
-
-      listTache2 = this.parentNode;
-      console.log(listTache2)
+    
+       listTache2 = this.parentNode;
+       
        var newInput=document.createElement('input');
        newInput.id="inputModif";
-       newInput.maxLength="21";
+       newInput.maxLength="20";
        newInput.value = titreDeTache.textContent;
-       console.log(titreDeTache.textContent)
        
        listTache2.replaceChild(newInput,listTache2.childNodes[0]);
-
        
-      var sortie = document.getElementById("inputModif")
+       
+       var sortie = document.getElementById("inputModif")
 
-      newInput.addEventListener('focusout', function() {
+       var validBtn = document.createElement('button')
+       validBtn.textContent = "Valider";
+      
+       
+       
+      validBtn.addEventListener('click', function() {
+        if (newInput.value === '') {
+          alert("Le champ d'entrée ne peut pas être vide!");
+          return;
+        }  
+        listeTache2 = this.parentNode
         var nouveauTitreDeTache = document.createElement('p');
         nouveauTitreDeTache.textContent = newInput.value;
         listTache2.replaceChild(nouveauTitreDeTache, newInput);
+        listTache2.removeChild(validBtn);
+         listTache2.appendChild(editBtn); 
+        // listTache2.replaceChild(nouveauTitreDeTache, newInput);
+        
+
     });
+
+    
+    listTache2.appendChild(validBtn);
+    listTache2.removeChild(editBtn);
 })
     
 
@@ -64,3 +82,5 @@ listTache.appendChild(tache)
 
      input.value =""
 })
+
+

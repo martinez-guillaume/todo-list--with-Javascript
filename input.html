@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Formulaire</h2>
+    <form>
+     <label ></label><br/>
+     <input type="text" name="username"><br/><br/>
+     <span id="minCaractere">*minimum 8 caractères</span><br>
+     <span id="majMinimum">*une Majuscule minimum</span><br>
+     <span id="specialCaractere">*un caractere special minimum</span><br>
+     <span id="chiffreMin">*un chiffre minimum</span><br>
+
+     <label></label><br/>
+     <input type="password" id="password" name="password"><button id="eyeShow">eyeShow</button><button id ="eyeHide">eyeHide</button><br/><br/>
+     <button id="valider">Envoyer</button>
+    </form>
+
+<style>
+
+#minCaractere{
+    display:none;
+}
+#majMinimum{
+    display:none;
+}
+#specialCaractere{
+    display:none;
+}
+#chiffreMin{
+    display: none;
+}
+    /* #eyeHide{
+        display: none;
+    }
+    #vide{
+        display:none
+    }
+    #charactere{
+        display:none;
+    } */
+</style>
+
+    <script src="input.js"></script>
+</body>
+</html>
